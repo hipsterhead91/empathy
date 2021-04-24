@@ -16,5 +16,5 @@
 .header__logo {
   width: 128px;
   height: 32px;
-  @include bg-image(url(../../images/logo.svg));
+  @include bg-image(url(../images/logo.svg));
 }

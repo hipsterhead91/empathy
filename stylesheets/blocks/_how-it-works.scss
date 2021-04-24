@@ -74,5 +74,5 @@
   z-index: 1;
   width: 400px;
   height: 400px;
-  @include bg-image(url(../../images/bg-papers.png), left);
+  @include bg-image(url(../images/bg-papers.png), left);
 }
