@@ -1,0 +1,13 @@
+// SECURITY
+
+.security {
+  @include flex(column, center);
+  width: 100%;
+  background: linear-gradient(to bottom, $color-beige 50%, $color-purple 50%);
+}
+
+.security__inner-wrapper {
+  @extend %plate-section;
+  width: 1200px;
+  height: 316px;
+}

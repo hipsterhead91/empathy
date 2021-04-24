@@ -1,0 +1,12 @@
+// FOOTER
+
+.footer {
+  @include flex(column, center);
+  width: 100%;
+  background-color: $color-white;
+}
+
+.footer__inner-wrapper {
+  width: 828px;
+  height: 626px;
+}

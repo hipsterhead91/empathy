@@ -1,0 +1,12 @@
+// AFFILIATES
+
+.affiliates {
+  @include flex(column, center);
+  width: 100%;
+  background-color: $color-beige;
+}
+
+.affiliates__inner-wrapper {
+  width: 828px;
+  height: 538px;
+}

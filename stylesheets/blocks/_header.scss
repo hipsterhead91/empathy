@@ -1,0 +1,20 @@
+// HEADER
+
+.header {
+  width: 100%;
+  padding-top: $bp-xs;
+  padding-bottom: $bp-xs;
+  @include flex(column, center);
+  background-color: $color-beige;
+}
+
+.header__inner-wrapper {
+  width: 1200px;
+  @include flex(row, center, space-between);
+}
+
+.header__logo {
+  width: 128px;
+  height: 32px;
+  @include bg-image(url(../../images/logo.svg));
+}

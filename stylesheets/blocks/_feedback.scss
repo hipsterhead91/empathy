@@ -1,0 +1,12 @@
+// FEEDBACK
+
+.feedback {
+  @include flex(column, center);
+  width: 100%;
+  background-color: $color-purple;
+}
+
+.feedback__inner-wrapper {
+  width: 828px;
+  height: 694px;
+}

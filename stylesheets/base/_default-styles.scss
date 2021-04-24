@@ -1,0 +1,33 @@
+// СБРОС СТИЛЕЙ
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  @include font-inter(400);
+  line-height: 1.2;
+}
+
+body {
+  @include flex(column, center);
+}
+
+main {
+  width: 100%;
+  @include flex(column, center);
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+ul, ol, li {
+  list-style: none;
+}

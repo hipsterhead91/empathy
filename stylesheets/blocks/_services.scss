@@ -1,0 +1,12 @@
+// SERVICES
+
+.services {
+  @include flex(column, center);
+  width: 100%;
+  background-color: $color-beige;
+}
+
+.services__inner-wrapper {
+  width: 100%;
+  height: 674px;
+}

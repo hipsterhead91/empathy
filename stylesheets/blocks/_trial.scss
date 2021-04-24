@@ -1,0 +1,12 @@
+// TRIAL
+
+.trial {
+  @include flex(column, center);
+  width: 100%;
+  background-color: $color-dark;
+}
+
+.trial__inner-wrapper {
+  width: 828px;
+  height: 446px;
+}

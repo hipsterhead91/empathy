@@ -1,0 +1,13 @@
+// TARIFFS
+
+.tariffs {
+  @include flex(column, center);
+  width: 100%;
+  background: linear-gradient(to bottom, $color-beige 50%, $color-dark 50%);
+}
+
+.tariffs__inner-wrapper {
+  @extend %plate-section;
+  width: 1200px;
+  height: 240px;
+}
