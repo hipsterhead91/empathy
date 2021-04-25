@@ -6,7 +6,7 @@
   background-color: $color-gold;
 }
 
-.how-it-works__inner-wrapper {
+.how-it-works__container {
   position: relative;
   width: 1200px;
   padding-top: 80px;
@@ -59,6 +59,7 @@
   @include font-inter(700);
   font-size: $fs-l;
   letter-spacing: 0.25px;
+  color: $color-dark;
 }
 
 .how-it-works__description {
@@ -66,6 +67,7 @@
   @include font-inter(400);
   font-size: $fs-m;
   letter-spacing: 0.25px;
+  color: $color-dark;
 }
 
 .how-it-works__image {

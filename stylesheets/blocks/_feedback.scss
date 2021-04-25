@@ -6,7 +6,9 @@
   background-color: $color-purple;
 }
 
-.feedback__inner-wrapper {
+.feedback__container {
   width: 828px;
-  height: 694px;
+  padding-top: $bp-xl;
+  padding-bottom: $bp-xxl;
+  @include flex(column, center);
 }

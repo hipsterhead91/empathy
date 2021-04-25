@@ -6,32 +6,32 @@
   background: linear-gradient(to bottom, $color-beige 50%, $color-gold 50%);
 }
 
-.learn-more__inner-wrapper {
+.learn-more__container {
   width: 1200px;
   padding-top: $bp-m;
   padding-bottom: $bp-m;
   @include flex(column, center);
   @extend %plate-section;
-}
 
-.learn-more__heading {
-  margin-bottom: 24px;
-  @include font-roboto(400);
-  font-size: $fs-xxl;
-  color: $color-dark;
-}
+  h2 {
+    margin-bottom: 24px;
+    @include font-roboto(400);
+    font-size: $fs-xxl;
+    color: $color-dark;
+  }
 
-.learn-more__text {
-  width: 648px;
-  margin-bottom: 24px;
-  @include font-inter(400);
-  font-size: $fs-l;
-  text-align: center;
-  letter-spacing: 0.25px;
-  color: $color-dark;
-}
+  p {
+    width: 648px;
+    margin-bottom: 24px;
+    @include font-inter(400);
+    font-size: $fs-l;
+    line-height: 1.6;
+    letter-spacing: 0.25px;
+    color: $color-dark;
+    text-align: center;
+  }
 
-.learn-more__button {
-  width: 142px;
-  @include button(transparent, $color-dark, 1px solid $color-dark);
+  button {
+    @include button(transparent, $color-dark, 1px solid $color-dark);
+  }
 }

@@ -6,8 +6,28 @@
   background: linear-gradient(to bottom, $color-beige 50%, $color-purple 50%);
 }
 
-.security__inner-wrapper {
+.security__container {
   @extend %plate-section;
   width: 1200px;
-  height: 316px;
+  padding-top: $bp-m;
+  padding-bottom: $bp-m;
+  @include flex(column, center);
+
+  h2 {
+    margin-bottom: 28px;
+    @include font-roboto(400);
+    font-size: $fs-xxl;
+    color: $color-dark;
+  }
+
+  p {
+    width: 58%;
+    @include font-inter(400);
+    font-size: $fs-l;
+    letter-spacing: 0.25px;
+    line-height: 1.6;
+    text-align: center;
+    color: $color-dark;
+  }
 }
+

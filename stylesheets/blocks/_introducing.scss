@@ -6,42 +6,46 @@
   background-color: $color-beige;
 }
 
-.introducing__inner-wrapper {
+.introducing__container {
   width: 1200px;
   padding-top: $bp-m;
+  padding-bottom: $bp-l;
   display: flex;
 }
 
-.introducing__content {
-  width: 50%;
-}
-
-.introducing__heading {
-  width: 400px;
-  margin-bottom: 24px;
-  @include font-roboto(400);
-  font-size: $fs-xxxl;
-  color: $color-dark;
-}
-
 .introducing__text {
-  width: 540px;
-  margin-bottom: 4px;
-  @include font-inter(400);
-  font-size: $fs-m;
-  line-height: 1.6;
-  letter-spacing: 0.25px;
-  color: $color-dark;
+  width: 50%;
+
+  h1 {
+    width: 400px;
+    margin-bottom: 24px;
+    @include font-roboto(400);
+    font-size: $fs-xxxl;
+    color: $color-dark;
+  }
+
+  p {
+    width: 540px;
+    margin-bottom: 4px;
+    @include font-inter(400);
+    font-size: $fs-m;
+    line-height: 1.6;
+    letter-spacing: 0.25px;
+    color: $color-dark;
+  }
+
+  p:last-of-type {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    @include font-inter(400);
+    font-size: $fs-l;
+    letter-spacing: 0.25px;
+    color: $color-dark;
+  }
 }
 
-.introducing__span {
-  margin-top: 24px;
-  margin-bottom: 24px;
-  @include font-inter(400);
-  font-size: $fs-l;
-  letter-spacing: 0.25px;
-  color: $color-dark;
-}
+
+
 
 .introducing__image {
   width: 50%;
