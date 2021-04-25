@@ -11,16 +11,20 @@
   padding-top: $bp-xl;
   padding-bottom: $bp-xl;
   @include flex(column, center);
+
+  h2 {
+    @include font-inter(700);
+    font-size: $fs-l;
+    text-align: center;
+    color: $color-dark;
+  }
+
+  button {
+    @include button(transparent, $color-dark, 1px solid $color-dark);
+  }
 }
 
-.services__heading {
-  @include font-inter(700);
-  font-size: $fs-l;
-  text-align: center;
-  color: $color-dark;
-}
-
-.services__grid {
+.services__list {
   margin-top: 80px;
   margin-bottom: 80px;
   display: grid;
@@ -28,7 +32,7 @@
   grid-column-gap: 16px;
 }
 
-.services__grid-element {
+.services__list-element {
   width: 144px;
   height: 160px;
   @include flex(column, center);
@@ -51,6 +55,3 @@
   }
 }
 
-.services__button {
-  @include button(transparent, $color-dark, 1px solid $color-dark);
-}

@@ -1,6 +1,7 @@
 // HOW IT WORKS
 
 .how-it-works {
+
   width: 100%;
   @include flex(column, center);
   background-color: $color-gold;
@@ -9,21 +10,19 @@
 .how-it-works__container {
   position: relative;
   width: 1200px;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  display: flex;
-}
+  padding-top: $bp-m;
+  padding-bottom: $bp-m;
+  @include flex();
 
-.how-it-works__heading {
-  z-index: 3;
-  width: 50%;
-  @include font-roboto(700);
-  font-size: $fs-xxxl;
-  color: $color-dark;
+  h2 {
+    width: 50%;
+    @include font-roboto(700);
+    font-size: $fs-xxxl;
+    color: $color-dark;
+  }
 }
 
 .how-it-works__list {
-  z-index: 2;
   width: 50%;
   list-style: none;
 }
@@ -32,49 +31,40 @@
   width: 100%;
   margin-bottom: 40px;
   @include flex(column);
+
+  div {
+    @include flex(row, baseline);
+  }
+  
+  div span {
+    width: 40px;
+    height: 40px;
+    margin-right: 24px;
+    @include flex(row, center, center);
+    @include font-inter(400);
+    font-size: $fs-l;
+    color: $color-white;
+    background-color: $color-dark;
+    border-radius: 20px;
+  }
+
+  div h3 {
+    margin-bottom: 10px;
+    @include font-inter(700);
+    font-size: $fs-l;
+    letter-spacing: 0.25px;
+    color: $color-dark;
+  }
+
+  p {
+    margin-left: 64px;
+    @include font-inter(400);
+    font-size: $fs-m;
+    letter-spacing: 0.18px;
+    color: $color-dark;
+  }
 }
 
 .how-it-works__list-element:last-of-type {
   margin-bottom: 0;
-}
-
-.how-it-works__alignment {
-  @include flex(row, baseline);
-}
-
-.how-it-works__number {
-  width: 40px;
-  height: 40px;
-  margin-right: 24px;
-  @include flex(row, center, center);
-  @include font-inter(400);
-  font-size: $fs-l;
-  color: $color-white;
-  background-color: $color-dark;
-  border-radius: 20px;
-}
-
-.how-it-works__subheading {
-  margin-bottom: 10px;
-  @include font-inter(700);
-  font-size: $fs-l;
-  letter-spacing: 0.25px;
-  color: $color-dark;
-}
-
-.how-it-works__description {
-  margin-left: 64px;
-  @include font-inter(400);
-  font-size: $fs-m;
-  letter-spacing: 0.25px;
-  color: $color-dark;
-}
-
-.how-it-works__image {
-  position: absolute;
-  bottom: -200px;
-  z-index: 1;
-  width: 400px;
-  height: 400px;
-  @include bg-image(url(../images/bg-papers.png), left);
 }

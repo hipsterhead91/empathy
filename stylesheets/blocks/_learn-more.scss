@@ -11,9 +11,11 @@
   padding-top: $bp-m;
   padding-bottom: $bp-m;
   @include flex(column, center);
-  @extend %plate-section;
+  background-color: $color-white;
+  border-radius: 8px;
 
   h2 {
+    max-width: 55%;
     margin-bottom: 24px;
     @include font-roboto(400);
     font-size: $fs-xxl;
@@ -21,7 +23,7 @@
   }
 
   p {
-    width: 648px;
+    max-width: 55%;
     margin-bottom: 24px;
     @include font-inter(400);
     font-size: $fs-l;

@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-.learn-more__container, .security__container, .tariffs__container {
-  background-color: #FFFFFF;
-  border-radius: 8px;
-}
-
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -84,7 +79,7 @@ a {
           align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: flex-start;
+          justify-content: start;
   background-color: #EDE6DD;
 }
 
@@ -128,7 +123,7 @@ a {
           align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: flex-start;
+          justify-content: start;
   background-color: #EDE6DD;
 }
 
@@ -139,14 +134,24 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  background-image: url(../images/bg-family.png);
+  background-position: bottom -50% right;
+  background-size: 50%;
+  background-repeat: no-repeat;
 }
 
-.introducing__text {
-  width: 50%;
-}
-
-.introducing__text h1 {
-  width: 400px;
+.introducing__container h1 {
+  width: 35%;
   margin-bottom: 24px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -155,8 +160,8 @@ a {
   color: #1E1928;
 }
 
-.introducing__text p {
-  width: 540px;
+.introducing__container p {
+  width: 45%;
   margin-bottom: 4px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -167,7 +172,8 @@ a {
   color: #1E1928;
 }
 
-.introducing__text p:last-of-type {
+.introducing__container p:last-of-type {
+  width: 45%;
   margin-top: 24px;
   margin-bottom: 24px;
   font-family: 'Inter', sans-serif;
@@ -176,14 +182,6 @@ a {
   font-size: 18px;
   letter-spacing: 0.25px;
   color: #1E1928;
-}
-
-.introducing__image {
-  width: 50%;
-  background-image: url(../images/bg-family.png);
-  background-position: bottom -32px right;
-  background-size: 80%;
-  background-repeat: no-repeat;
 }
 
 .learn-more {
@@ -200,7 +198,7 @@ a {
           align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: flex-start;
+          justify-content: start;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #EDE6DD), color-stop(50%, #FFD394));
   background: linear-gradient(to bottom, #EDE6DD 50%, #FFD394 50%);
 }
@@ -221,10 +219,13 @@ a {
           align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: flex-start;
+          justify-content: start;
+  background-color: #FFFFFF;
+  border-radius: 8px;
 }
 
 .learn-more__container h2 {
+  max-width: 55%;
   margin-bottom: 24px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -234,7 +235,7 @@ a {
 }
 
 .learn-more__container p {
-  width: 648px;
+  max-width: 55%;
   margin-bottom: 24px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -274,7 +275,7 @@ a {
           align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: flex-start;
+          justify-content: start;
   background-color: #FFD394;
 }
 
@@ -286,10 +287,19 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
-.how-it-works__heading {
-  z-index: 3;
+.how-it-works__container h2 {
   width: 50%;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -299,7 +309,6 @@ a {
 }
 
 .how-it-works__list {
-  z-index: 2;
   width: 50%;
   list-style: none;
 }
@@ -314,19 +323,15 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: flex-start;
+          justify-content: start;
 }
 
-.how-it-works__list-element:last-of-type {
-  margin-bottom: 0;
-}
-
-.how-it-works__alignment {
+.how-it-works__list-element div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -339,10 +344,10 @@ a {
           align-items: baseline;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: flex-start;
+          justify-content: start;
 }
 
-.how-it-works__number {
+.how-it-works__list-element div span {
   width: 40px;
   height: 40px;
   margin-right: 24px;
@@ -368,7 +373,7 @@ a {
   border-radius: 20px;
 }
 
-.how-it-works__subheading {
+.how-it-works__list-element div h3 {
   margin-bottom: 10px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -378,26 +383,18 @@ a {
   color: #1E1928;
 }
 
-.how-it-works__description {
+.how-it-works__list-element p {
   margin-left: 64px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.18px;
   color: #1E1928;
 }
 
-.how-it-works__image {
-  position: absolute;
-  bottom: -200px;
-  z-index: 1;
-  width: 400px;
-  height: 400px;
-  background-image: url(../images/bg-papers.png);
-  background-position: left;
-  background-size: contain;
-  background-repeat: no-repeat;
+.how-it-works__list-element:last-of-type {
+  margin-bottom: 0;
 }
 
 .about {
@@ -413,8 +410,8 @@ a {
           align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: flex-start;
-  z-index: 2;
+          justify-content: start;
+  z-index: 1;
   width: 100%;
   background-color: #EDE6DD;
 }
@@ -438,7 +435,7 @@ a {
           align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: flex-start;
+          justify-content: start;
   width: 100%;
   background-color: #EDE6DD;
 }
@@ -459,10 +456,10 @@ a {
           align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: flex-start;
+          justify-content: start;
 }
 
-.services__heading {
+.services__container h2 {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -471,7 +468,21 @@ a {
   color: #1E1928;
 }
 
-.services__grid {
+.services__container button {
+  height: 40px;
+  padding-left: 32px;
+  padding-right: 32px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #1E1928;
+  background-color: transparent;
+  border: 1px solid #1E1928;
+  border-radius: 20px;
+}
+
+.services__list {
   margin-top: 80px;
   margin-bottom: 80px;
   display: -ms-grid;
@@ -481,7 +492,7 @@ a {
   grid-column-gap: 16px;
 }
 
-.services__grid-element {
+.services__list-element {
   width: 144px;
   height: 160px;
   display: -webkit-box;
@@ -496,18 +507,18 @@ a {
           align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: flex-start;
+          justify-content: start;
   background-color: #FFFFFF;
   border-radius: 8px;
 }
 
-.services__grid-element img {
+.services__list-element img {
   width: 88px;
   height: 88px;
   margin-top: 12px;
 }
 
-.services__grid-element h3 {
+.services__list-element h3 {
   width: 80%;
   margin-top: 12px;
   font-family: 'Inter', sans-serif;
@@ -518,21 +529,8 @@ a {
   color: #1E1928;
 }
 
-.services__button {
-  height: 40px;
-  padding-left: 32px;
-  padding-right: 32px;
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  color: #1E1928;
-  background-color: transparent;
-  border: 1px solid #1E1928;
-  border-radius: 20px;
-}
-
 .security {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -545,8 +543,7 @@ a {
           align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: flex-start;
-  width: 100%;
+          justify-content: start;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #EDE6DD), color-stop(50%, #592141));
   background: linear-gradient(to bottom, #EDE6DD 50%, #592141 50%);
 }
@@ -567,7 +564,9 @@ a {
           align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: flex-start;
+          justify-content: start;
+  background-color: #FFFFFF;
+  border-radius: 8px;
 }
 
 .security__container h2 {
@@ -604,7 +603,7 @@ a {
           align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: flex-start;
+          justify-content: start;
   width: 100%;
   background-color: #592141;
 }
@@ -625,7 +624,7 @@ a {
           align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: flex-start;
+          justify-content: start;
 }
 
 .affiliates {
@@ -641,7 +640,7 @@ a {
           align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: flex-start;
+          justify-content: start;
   width: 100%;
   background-color: #EDE6DD;
 }
@@ -664,7 +663,7 @@ a {
           align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: flex-start;
+          justify-content: start;
   width: 100%;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #EDE6DD), color-stop(50%, #1E1928));
   background: linear-gradient(to bottom, #EDE6DD 50%, #1E1928 50%);
@@ -673,6 +672,8 @@ a {
 .tariffs__container {
   width: 1200px;
   height: 240px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
 }
 
 .trial {
@@ -688,7 +689,7 @@ a {
           align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: flex-start;
+          justify-content: start;
   width: 100%;
   background-color: #1E1928;
 }
@@ -711,7 +712,7 @@ a {
           align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: flex-start;
+          justify-content: start;
   width: 100%;
   background-color: #FFFFFF;
 }
@@ -721,7 +722,7 @@ a {
   height: 626px;
 }
 
-.form {
+.request-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -741,39 +742,33 @@ a {
   border-radius: 28px;
 }
 
-.form__input {
+.request-form input {
   padding-left: 32px;
-}
-
-.form__input::-webkit-input-placeholder {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
+  color: #1E1928;
+  background-color: transparent;
 }
 
-.form__input:-ms-input-placeholder {
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
+.request-form input::-webkit-input-placeholder {
+  color: rgba(30, 25, 40, 0.23);
 }
 
-.form__input::-ms-input-placeholder {
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
+.request-form input:-ms-input-placeholder {
+  color: rgba(30, 25, 40, 0.23);
 }
 
-.form__input::placeholder {
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
+.request-form input::-ms-input-placeholder {
+  color: rgba(30, 25, 40, 0.23);
 }
 
-.form__button {
+.request-form input::placeholder {
+  color: rgba(30, 25, 40, 0.23);
+}
+
+.request-form button {
   margin-right: 10px;
   height: 40px;
   padding-left: 32px;

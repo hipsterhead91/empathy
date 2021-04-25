@@ -10,14 +10,11 @@
   width: 1200px;
   padding-top: $bp-m;
   padding-bottom: $bp-l;
-  display: flex;
-}
-
-.introducing__text {
-  width: 50%;
+  @include flex(column);
+  @include bg-image(url(../images/bg-family.png), bottom -50% right, 50%);
 
   h1 {
-    width: 400px;
+    width: 35%;
     margin-bottom: 24px;
     @include font-roboto(400);
     font-size: $fs-xxxl;
@@ -25,7 +22,7 @@
   }
 
   p {
-    width: 540px;
+    width: 45%;
     margin-bottom: 4px;
     @include font-inter(400);
     font-size: $fs-m;
@@ -35,6 +32,7 @@
   }
 
   p:last-of-type {
+    width: 45%;
     margin-top: 24px;
     margin-bottom: 24px;
     @include font-inter(400);
@@ -42,12 +40,4 @@
     letter-spacing: 0.25px;
     color: $color-dark;
   }
-}
-
-
-
-
-.introducing__image {
-  width: 50%;
-  @include bg-image(url(../images/bg-family.png), bottom -32px right, 80%);
 }

@@ -1,17 +1,18 @@
 // SECURITY
 
 .security {
-  @include flex(column, center);
   width: 100%;
+  @include flex(column, center);
   background: linear-gradient(to bottom, $color-beige 50%, $color-purple 50%);
 }
 
 .security__container {
-  @extend %plate-section;
   width: 1200px;
   padding-top: $bp-m;
   padding-bottom: $bp-m;
   @include flex(column, center);
+  background-color: $color-white;
+  border-radius: 8px;
 
   h2 {
     margin-bottom: 28px;
@@ -30,4 +31,3 @@
     color: $color-dark;
   }
 }
-

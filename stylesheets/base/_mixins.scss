@@ -12,7 +12,7 @@
   font-weight: $weight;
 }
 
-@mixin flex($direction: row, $align: flex-start, $justify: flex-start) {
+@mixin flex($direction: row, $align: normal, $justify: start) {
   display: flex;
   flex-direction: $direction;
   align-items: $align;

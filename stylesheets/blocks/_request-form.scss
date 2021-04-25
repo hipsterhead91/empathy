@@ -1,0 +1,26 @@
+// FORM
+
+.request-form {
+  @include flex(row, center, space-between);
+  width: 448px;
+  height: 56px;
+  background-color: $color-white;
+  border-radius: 28px;
+
+  input {
+    padding-left: 32px;
+    @include font-inter(400);
+    font-size: $fs-s;
+    color: $color-dark;
+    background-color: transparent;
+  }
+
+  input::placeholder {
+    color: rgba(30, 25, 40, 0.23);
+  }
+
+  button {
+    margin-right: 10px;
+    @include button($color-dark, $color-white, none); 
+  }
+}
