@@ -19,7 +19,7 @@
   justify-content: $justify;
 }
 
-@mixin button($bg-color, $color, $border) {
+@mixin button($bg-color: $color-dark, $color: $color-white, $border: none) {
   height: 40px;
   padding-left: 32px;
   padding-right: 32px;

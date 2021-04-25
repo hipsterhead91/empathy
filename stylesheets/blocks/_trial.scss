@@ -7,6 +7,22 @@
 }
 
 .trial__container {
-  width: 828px;
-  height: 446px;
+  width: 1200px;
+  padding-top: $bp-xl;
+  padding-bottom: $bp-xl;
+  @include flex(column, center);
+
+  h2 {
+    margin-bottom: 38px;
+    @include font-inter(400);
+    font-size: $fs-l;
+    color: $color-white;
+  }
+
+  p {
+    margin-top: 24px;
+    @include font-inter(400);
+    font-size: $fs-xs;
+    color: $color-white;
+  }
 }

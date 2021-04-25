@@ -7,6 +7,29 @@
 }
 
 .affiliates__container {
-  width: 828px;
-  height: 538px;
+  width: 1200px;
+  padding-top: $bp-xl;
+  padding-bottom: $bp-xl;
+  @include flex(column, center);
+
+  h2 {
+    margin-bottom: 66px;
+    @include font-roboto(400);
+    font-size: $fs-xxl;
+    color: $color-dark;
+  }
+}
+
+.affiliates__list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 16px;
+}
+
+.affiliates__list-element {
+  height: 144px;
+  @include flex(column, center, center);
+  background: rgba(30, 25, 40, 0.08);
+  border-radius: 8px;
 }

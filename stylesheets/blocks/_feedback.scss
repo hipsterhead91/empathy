@@ -7,8 +7,37 @@
 }
 
 .feedback__container {
-  width: 828px;
+  width: 45%;
   padding-top: $bp-xl;
   padding-bottom: $bp-xxl;
   @include flex(column, center);
+
+  h2 { 
+    margin-bottom: 24px;
+    @include font-inter(400);
+    font-size: $fs-m;
+    letter-spacing: 0.25px;
+    color: $color-white;
+  }
+
+  span {
+    margin-bottom: -32px;
+    @include font-roboto(400);
+    font-size: 96px;
+    color: $color-white;
+  }
+
+  p {
+    @include font-roboto(400);
+    font-size: $fs-xxl;
+    text-align: center;
+    color: $color-white;
+  }
+
+  p:last-of-type {
+    margin-top: 32px;
+    @include font-inter(400);
+    font-size: $fs-m;
+    color: $color-white;
+  }
 }
