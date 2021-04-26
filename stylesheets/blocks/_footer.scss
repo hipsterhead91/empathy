@@ -22,42 +22,114 @@
 .footer__top-left {
   width: 50%;
   @include flex();
+}
 
-  ul {
-    width: 50%;
-    @include flex(column);
+.footer__links {
+  width: 50%;
+  @include flex(column);
 
-    h2 {
-      margin-bottom: 16px;
-      @include font-inter(700);
-      font-size: $fs-l;
-      line-height: 1.6;
-      letter-spacing: 0.25px;
-      color: $color-dark;
-    }
+  h2 {
+    margin-bottom: 16px;
+    @include font-inter(700);
+    font-size: $fs-l;
+    line-height: 1.6;
+    letter-spacing: 0.25px;
+    color: $color-dark;
+  }
 
-    li {
-      margin-bottom: 16px;
+  li { margin-bottom: 16px }
+  li:last-of-type { margin-bottom: 0 }
 
-      a {
-        @include font-inter(400);
-        font-size: $fs-m;
-        line-height: 1.6;
-        color: $color-dark;
-      }
-    }
-
-    li:last-of-type {
-      margin-bottom: 0;
-    }
+  a {
+    @include font-inter(400);
+    font-size: $fs-m;
+    line-height: 1.6;
+    color: $color-dark;
   }
 }
 
 .footer__top-right {
   width: 50%;
-  @include flex(row, baseline, flex-end);
+  @include flex(row, normal, flex-end);
 }
+
+#subscribe-button {
+  @include button();
+}
+
+#twitter-button {
+  @extend %round-button;
+  @include bg-image(url('../images/logo-twitter.svg'), center, 40%);
+}
+
+#instagram-button {
+  @extend %round-button;
+  @include bg-image(url('../images/logo-instagram.svg'), center, 40%);
+}
+
+#facebook-button {
+  @extend %round-button;
+  @include bg-image(url('../images/logo-facebook.svg'), center, 40%);
+}
+
+#linkedin-button {
+  @extend %round-button;
+  @include bg-image(url('../images/logo-linkedin.svg'), center, 40%);
+}
+
+
+
+
+
+
 
 .footer__bottom {
   width: 100%;
+  @include flex(row, flex-end, space-between);
+}
+
+.footer__bottom-left {
+  @include flex(column);
+}
+
+.footer__description {
+  max-width: 664px;
+  margin-bottom: 14px;
+  @include font-inter(400);
+  font-size: $fs-s;
+  color: $color-dark;
+}
+
+.footer__address {
+  @include font-inter(700);
+  font-size: $fs-xs;
+  color: $color-dark;
+}
+
+.footer__copyright {
+  @include font-inter(400);
+  font-size: $fs-xs;
+  color: $color-dark;
+}
+
+.footer__bottom-right {
+  @include flex(column, flex-end);
+}
+
+.footer__stores {
+  margin-bottom: 20px;
+  @include flex();
+}
+
+.footer__app-store {
+  width: 120px;
+  height: 40px;
+  margin-right: 16px;
+  @include bg-image(url('../images/logo-apple.svg'));
+}
+
+.footer__google-play {
+  width: 120px;
+  height: 40px;
+  @include bg-image(url('../images/logo-google.svg'));
 }

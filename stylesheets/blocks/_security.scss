@@ -3,7 +3,7 @@
 .security {
   width: 100%;
   @include flex(column, center);
-  background: linear-gradient(to bottom, $color-beige 50%, $color-purple 50%);
+  background: linear-gradient(to bottom, $color-sand 50%, $color-purple 50%);
 }
 
 .security__container {

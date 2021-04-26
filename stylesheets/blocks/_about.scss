@@ -4,11 +4,43 @@
   @include flex(column, center);
   z-index: 1;
   width: 100%;
-  background-color: $color-beige;
+  background-color: $color-sand;
 }
 
 .about__container {
   width: 1200px;
   padding-top: $bp-m;
   padding-bottom: $bp-m;
+  @include flex(column, center);
+}
+
+.about__block {
+  width: 100%;
+  margin-bottom: 92px;
+  @include flex(row, center);
+  
+  &:last-of-type { margin-bottom: 0 }
+  img { width: 50% }
+}
+
+.about__text {
+  h2 {
+    margin-bottom: 28px;
+    @include font-roboto(700);
+    font-size: $fs-xxl;
+    color: $color-dark;
+  }
+
+  p {
+    @include font-inter(400);
+    font-size: $fs-l;
+    line-height: 1.6;
+    letter-spacing: 0.25px;
+    color: $color-dark;
+  }
+}
+
+.end-aligned {
+  h2 { text-align: end }
+  p { text-align: end }
 }
