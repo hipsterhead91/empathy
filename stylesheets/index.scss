@@ -3,13 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 // DEFAULT STYLES
-@import '../node_modules/normalize-scss/sass/_normalize';
-@import '_default-styles';
+@import '../node_modules/normalize-scss/sass/normalize';
+@import 'default-styles';
 
 // VARIABLES, PLACEHOLDERS, MIXINS
-@import '_base.scss';
+@import 'base';
 
-// PAGE SECTIONS
+// BLOCKS
 @import 'blocks/header';
 @import 'blocks/introducing';
 @import 'blocks/learn-more';
@@ -22,6 +22,4 @@
 @import 'blocks/tariffs';
 @import 'blocks/trial';
 @import 'blocks/footer';
-
-// BLOCKS
 @import 'blocks/request-form';

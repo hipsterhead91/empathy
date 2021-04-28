@@ -4,6 +4,7 @@
   @include flex(column, center, center);
   width: 100%;
   background-color: $beige;
+  color: red;
 }
 
 .header__container {
@@ -18,9 +19,13 @@
 }
 
 .header__logo {
+  @include bg-image(url(../images/logo.svg));
   width: 128px;
   height: 32px;
-  @include bg-image(url(../images/logo.svg));
+
+  @media screen and (max-width: 576px) {
+    width: 100px;
+  }
 }
 
 .menu__button {
@@ -31,13 +36,14 @@
   display: none;
   cursor: pointer;
 
-  @media screen and (max-width: 768px) {
+  // "бургер" появляется на этом разрешении и ниже
+  @media screen and (max-width: 576px) {
     @include flex(column, center, space-between);
   }
 
   span {
     width: 100%;
-    height: 3px;
+    height: 2px;
     background-color: $dark;
   }
 }
@@ -49,7 +55,7 @@
 .menu__list {
   @include flex();
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 576px) {
     position: fixed;
     top: 80px;
     right: 0;
@@ -69,7 +75,7 @@
   margin-right: 40px;
   &:last-of-type { margin-right: 0 }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 576px) {
     margin-right: 0;
     margin-bottom: 20px;
     &:last-of-type { margin-bottom: 0 }
@@ -78,11 +84,11 @@
 
 .menu__link {
   @include font-inter(400);
-  font-size: $fs-s;
-  color: $color-dark;
+  font-size: 14px;
+  color: $dark;
 
   @media screen and (max-width: 768px) {
-    font-size: $fs-xl;
+    font-size: 20px;
   }
 }
 

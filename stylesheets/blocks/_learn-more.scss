@@ -1,39 +1,63 @@
 // LEARN MORE
 
 .learn-more {
-  width: 100%;
   @include flex(column, center);
-  background: linear-gradient(to bottom, $color-beige 50%, $color-gold 50%);
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  background: linear-gradient(to bottom, $beige 50%, $gold 50%);
 }
 
 .learn-more__container {
-  width: 1200px;
-  padding-top: $bp-m;
-  padding-bottom: $bp-m;
   @include flex(column, center);
-  background-color: $color-white;
+  @extend %container;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: $white;
   border-radius: 8px;
 
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
   h2 {
-    max-width: 55%;
+    @extend %font-roboto;
+    max-width: 200px;
     margin-bottom: 24px;
-    @include font-roboto(400);
-    font-size: $fs-xxl;
-    color: $color-dark;
+    font-size: 32px;
+    line-height: 131%;
+    color: $dark;
+
+    @media screen and (max-width: 576px) {
+      font-size: 24px;
+    }
   }
 
   p {
-    max-width: 55%;
+    @extend %font-roboto;
+    max-width: 650px;
     margin-bottom: 24px;
-    @include font-inter(400);
-    font-size: $fs-l;
-    line-height: 1.6;
+    font-size: 18px;
+    line-height: 167%;
     letter-spacing: 0.25px;
-    color: $color-dark;
+    color: $dark-lite;
     text-align: center;
+
+    @media screen and (max-width: 576px) {
+      max-width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 14px;
+    }
   }
 
   button {
-    @include button(transparent, $color-dark, 1px solid $color-dark);
+    @include button(transparent, $dark, 1px solid $dark);
   }
 }

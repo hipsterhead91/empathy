@@ -2,16 +2,17 @@
 
 .about {
   @include flex(column, center);
-  z-index: 1;
+  position: relative;
+  z-index: 3;
   width: 100%;
-  background-color: $color-sand;
+  background-color: $sand;
 }
 
 .about__container {
-  width: 1200px;
+  @include flex(column, center);
+  @extend %container;
   padding-top: $bp-m;
   padding-bottom: $bp-m;
-  @include flex(column, center);
 }
 
 .about__block {

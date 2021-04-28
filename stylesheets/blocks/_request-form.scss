@@ -11,18 +11,28 @@
     max-width: 360px;
   }
 
+  // @media screen and (max-width: 576px) {
+  //   max-width: 360px;
+  //   height: 48px;
+  // }
+
   input {
     @extend %font-inter;
-    width: 120px;
+    max-width: 120px;
     margin-left: 32px;
-    font-size: $fs-s;
+    font-size: 14px;
     line-height: 142%;
     color: $dark;
     background-color: transparent;
-  }
 
-  input::placeholder {
-    color: rgba(30, 25, 40, 0.23);
+    @media screen and (max-width: 576px) {
+      margin-left: 20px;
+      font-size: 12px;
+    }
+
+    &::placeholder {
+      color: rgba(30, 25, 40, 0.23);
+    }
   }
 
   button {

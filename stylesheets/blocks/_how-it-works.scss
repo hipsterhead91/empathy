@@ -1,70 +1,154 @@
 // HOW IT WORKS
 
 .how-it-works {
-
-  width: 100%;
   @include flex(column, center);
-  background-color: $color-gold;
+  width: 100%;
+  background-color: $gold;
 }
 
 .how-it-works__container {
-  position: relative;
-  width: 1200px;
-  padding-top: $bp-m;
-  padding-bottom: $bp-m;
   @include flex();
+  @extend %container;
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @media screen and (max-width: 576px) {
+    @include flex(column);
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
 
   h2 {
+    @extend %font-roboto-bold;
+    position: relative;
+    z-index: 1;
     width: 50%;
-    @include font-roboto(700);
-    font-size: $fs-xxxl;
-    color: $color-dark;
+    font-size: 48px;
+    line-height: 121%;
+    color: $dark;
+
+    @media screen and (max-width: 768px) {
+      width: 40%;
+      font-size: 40px;
+    }
+
+    @media screen and (max-width: 576px) {
+      width: 100%;
+      margin-bottom: 48px;
+    }
   }
 }
 
 .how-it-works__list {
+  position: relative;
+  z-index: 1;
   width: 50%;
   list-style: none;
+
+  @media screen and (max-width: 768px) {
+    width: 60%;
+  }
+
+  @media screen and (max-width: 576px) {
+    width: 100%;
+  }
 }
 
 .how-it-works__list-element {
+  @include flex(column);
   width: 100%;
   margin-bottom: 40px;
-  @include flex(column);
 
   div {
     @include flex(row, baseline);
+    width: 100%;
   }
   
-  div span {
+  span {
+    @include flex(row, center, center);
+    @extend %font-inter;
     width: 40px;
     height: 40px;
     margin-right: 24px;
-    @include flex(row, center, center);
-    @include font-inter(400);
-    font-size: $fs-l;
-    color: $color-white;
-    background-color: $color-dark;
+    font-size: 18px;
+    color: $white;
+    background-color: $dark;
     border-radius: 20px;
+
+    @media screen and (max-width: 576px) {
+      width: 32px;
+      height: 32px;
+      margin-right: 16px;
+      font-size: 16px;
+      border-radius: 16px;
+    }
+
+    @media screen and (max-width: 360px) {
+      width: 28px;
+      height: 28px;
+      margin-right: 12px;
+      font-size: 14px;
+      border-radius: 14px;
+    }
   }
 
-  div h3 {
-    margin-bottom: 10px;
-    @include font-inter(700);
-    font-size: $fs-l;
+  h3 {
+    @extend %font-inter-bold;
+    max-width: calc(100% - 40px - 24px);
+    font-size: 18px;
+    line-height: 153%;
     letter-spacing: 0.25px;
-    color: $color-dark;
+    color: $dark;
+
+    @media screen and (max-width: 576px) {
+      max-width: calc(100% - 32px - 16px);
+    }
+
+    @media screen and (max-width: 360px) {
+      max-width: calc(100% - 28px - 14px);
+    }
   }
 
   p {
+    @extend %font-inter;
+    margin-top: 10px;
     margin-left: 64px;
-    @include font-inter(400);
-    font-size: $fs-m;
+    font-size: 16px;
+    line-height: 153%;
     letter-spacing: 0.18px;
-    color: $color-dark;
+    color: $dark-lite;
+
+    @media screen and (max-width: 576px) {
+      margin-left: 48px;
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 360px) {
+      margin-left: 40px;
+    }
   }
 }
 
 .how-it-works__list-element:last-of-type {
   margin-bottom: 0;
+}
+
+.how-it-works__image {
+  @include bg-image(url(../images/bg-papers.png));
+  position: absolute;
+  bottom: -188px;
+  left: -180px;
+  width: 400px;
+  height: 400px;
+
+  @media screen and (max-width: 1200px) {
+    left: -120px;
+  }
+
+  @media screen and (max-width: 576px) {
+    bottom: -144px;
+    width: 320px;
+    height: 320px;
+  }
 }
