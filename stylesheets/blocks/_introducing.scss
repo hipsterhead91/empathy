@@ -1,43 +1,97 @@
 // INTRODUCING
 
 .introducing {
-  width: 100%;
   @include flex(column, center);
-  background-color: $color-beige;
+  width: 100%;
+  background-color: $beige;
 }
 
 .introducing__container {
-  width: 1200px;
-  padding-top: $bp-m;
-  padding-bottom: $bp-l;
-  @include flex(column);
-  @include bg-image(url(../images/bg-family.png), bottom -50% right, 50%);
+  @include flex();
+  @extend %container;
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 96px;
+}
+
+.introducing__info {
+  z-index: 2;
+  width: 50%;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 
   h1 {
-    width: 35%;
+    @extend %font-roboto;
+    max-width: 70%;
     margin-bottom: 24px;
-    @include font-roboto(400);
-    font-size: $fs-xxxl;
-    color: $color-dark;
+    font-size: 48px;
+    line-height: 121%;
+    color: $dark;
+
+    @media screen and (max-width: 1200px) {
+      font-size: 32px;
+    }
+  }
+
+  p:first-of-type {
+    @extend %font-inter;
+    max-width: 90%;
+    margin-bottom: 4px;
+    font-size: 16px;
+    line-height: 187%;
+    letter-spacing: 0.25px;
+    color: $dark-lite;
+
+    @media screen and (max-width: 1200px) {
+      max-width: 80%;
+      font-size: 14px;
+    }
   }
 
   p {
-    width: 45%;
-    margin-bottom: 4px;
-    @include font-inter(400);
-    font-size: $fs-m;
-    line-height: 1.6;
+    @extend %font-inter;
+    max-width: 90%;
+    margin-bottom: 28px;
+    font-size: 18px;
+    line-height: 167%;
     letter-spacing: 0.25px;
-    color: $color-dark;
+    color: $dark-lite;
+
+    @media screen and (max-width: 1200px) {
+      max-width: 80%;
+      font-size: 16px;
+    }
   }
 
   p:last-of-type {
-    width: 45%;
-    margin-top: 24px;
+    @extend %font-inter;
     margin-bottom: 24px;
-    @include font-inter(400);
-    font-size: $fs-l;
+    font-size: 18px;
     letter-spacing: 0.25px;
     color: $color-dark;
+
+    @media screen and (max-width: 1200px) {
+      font-size: 16px;
+    }
+  }
+}
+
+.introducing__image {
+  @include bg-image(url(../images/bg-family.png));
+  position: absolute;
+  z-index: 1;
+  bottom: -80px;
+  right: 0;
+  width: 50%;
+  height: 100%;
+
+  @media screen and (max-width: 1200px) {
+    bottom: -160px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 40%;
   }
 }

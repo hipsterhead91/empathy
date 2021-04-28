@@ -2,16 +2,22 @@
 
 .request-form {
   @include flex(row, center, space-between);
-  width: 448px;
+  max-width: 448px;
   height: 56px;
-  background-color: $color-white;
+  background-color: $white;
   border-radius: 28px;
 
+  @media screen and (max-width: 1200px) {
+    max-width: 360px;
+  }
+
   input {
-    padding-left: 32px;
-    @include font-inter(400);
+    @extend %font-inter;
+    width: 120px;
+    margin-left: 32px;
     font-size: $fs-s;
-    color: $color-dark;
+    line-height: 142%;
+    color: $dark;
     background-color: transparent;
   }
 
@@ -20,7 +26,7 @@
   }
 
   button {
+    @include button($dark, $white, none); 
     margin-right: 10px;
-    @include button($color-dark, $color-white, none); 
   }
 }
