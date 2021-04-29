@@ -3,24 +3,24 @@
 .services {
   @include flex(column, center);
   width: 100%;
-  background-color: $color-sand;
+  background-color: $sand;
 }
 
 .services__container {
-  width: 100%;
-  padding-top: $bp-xl;
-  padding-bottom: $bp-xl;
   @include flex(column, center);
+  width: 100%;
+  padding-top: 144px;
+  padding-bottom: 144px;
 
   h2 {
-    @include font-inter(700);
-    font-size: $fs-l;
+    @extend %font-inter-bold;
+    font-size: 18px;
     text-align: center;
-    color: $color-dark;
+    color: $dark;
   }
 
   button {
-    @include button(transparent, $color-dark, 1px solid $color-dark);
+    @include button(transparent, $dark, 1px solid $dark);
   }
 }
 
@@ -33,10 +33,10 @@
 }
 
 .services__list-element {
+  @include flex(column, center);
   width: 144px;
   height: 160px;
-  @include flex(column, center);
-  background-color: $color-white;
+  background-color: $white;
   border-radius: 8px;
 
   img {
@@ -46,12 +46,11 @@
   }
 
   h3 {
+    @extend %font-inter-bold;
     width: 80%;
     margin-top: 12px;
-    @include font-inter(700);
-    font-size: $fs-xs;
+    font-size: 12px;
     text-align: center;
-    color: $color-dark;
+    color: $dark;
   }
 }
-

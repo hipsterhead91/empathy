@@ -16,32 +16,74 @@
 }
 
 .about__block {
+  @include flex(row, center);
+  position: relative;
   width: 100%;
   margin-bottom: 92px;
-  @include flex(row, center);
-  
+
   &:last-of-type { margin-bottom: 0 }
-  img { width: 50% }
 }
 
 .about__text {
+  z-index: 1;
+  width: 50%;
+  
+  @media screen and (max-width: 576px) {
+    width: 100%;
+  }
+
   h2 {
     @extend %font-roboto-bold;
     margin-bottom: 28px;
     font-size: 32px;
+    line-height: 131%;
     color: $dark;
+
+    @media screen and (max-width: 768px) {
+      font-size: 28px;
+    }
+
+    @media screen and (max-width: 576px) {
+      font-size: 24px;
+    }
   }
 
   p {
     @extend %font-inter;
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 167%;
     letter-spacing: 0.25px;
     color: $dark-lite;
+
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: 576px) {
+      font-size: 14px;
+    }
   }
 }
 
 ._end-aligned {
   h2 { text-align: end }
   p { text-align: end }
+
+  @media screen and (max-width: 576px) {
+    padding-left: 20%;
+  }
+}
+
+._start-aligned {
+  @media screen and (max-width: 576px) {
+    padding-right: 20%;
+  }
+}
+
+.about__image {
+  width: 50%;
+
+  @media screen and (max-width: 576px) {
+    display: none;
+  }
 }

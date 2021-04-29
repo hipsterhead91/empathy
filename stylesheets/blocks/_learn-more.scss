@@ -21,11 +21,6 @@
     border-radius: 0;
   }
 
-  @media screen and (max-width: 768px) {
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
-
   h2 {
     @extend %font-roboto;
     max-width: 200px;
