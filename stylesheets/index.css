@@ -62,7 +62,7 @@ a {
   text-decoration: none;
 }
 
-.introducing__info p:first-of-type, .introducing__info p, .introducing__info p:last-of-type, .learn-more__container button, .how-it-works__list-element span, .how-it-works__list-element p, .services__container button, #subscribe-button, .request-form input, .request-form button {
+.introducing__info p:first-of-type, .introducing__info p, .introducing__info p:last-of-type, .learn-more__container button, .how-it-works__list-element span, .how-it-works__list-element p, .about__text p, .services__container button, #subscribe-button, .request-form input, .request-form button {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -80,7 +80,7 @@ a {
   font-weight: 400;
 }
 
-.how-it-works__container h2 {
+.how-it-works__container h2, .about__text h2 {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -880,28 +880,22 @@ a {
 
 .about__text h2 {
   margin-bottom: 28px;
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: 700;
   font-size: 32px;
   color: #1E1928;
 }
 
 .about__text p {
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 400;
   font-size: 18px;
   line-height: 1.6;
   letter-spacing: 0.25px;
-  color: #1E1928;
+  color: rgba(30, 25, 40, 0.8);
 }
 
-.end-aligned h2 {
+._end-aligned h2 {
   text-align: end;
 }
 
-.end-aligned p {
+._end-aligned p {
   text-align: end;
 }
 

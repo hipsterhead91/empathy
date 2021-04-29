@@ -11,8 +11,8 @@
 .about__container {
   @include flex(column, center);
   @extend %container;
-  padding-top: $bp-m;
-  padding-bottom: $bp-m;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .about__block {
@@ -26,22 +26,22 @@
 
 .about__text {
   h2 {
+    @extend %font-roboto-bold;
     margin-bottom: 28px;
-    @include font-roboto(700);
-    font-size: $fs-xxl;
-    color: $color-dark;
+    font-size: 32px;
+    color: $dark;
   }
 
   p {
-    @include font-inter(400);
-    font-size: $fs-l;
+    @extend %font-inter;
+    font-size: 18px;
     line-height: 1.6;
     letter-spacing: 0.25px;
-    color: $color-dark;
+    color: $dark-lite;
   }
 }
 
-.end-aligned {
+._end-aligned {
   h2 { text-align: end }
   p { text-align: end }
 }
