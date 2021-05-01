@@ -3,39 +3,90 @@
 .tariffs {
   @include flex(column, center);
   width: 100%;
-  background: linear-gradient(to bottom, $color-beige 50%, $color-dark 50%);
+  background: linear-gradient(to bottom, $beige 50%, $dark 50%);
 }
 
 .tariffs__container {
-  width: 1200px;
-  padding-top: $bp-m;
-  padding-bottom: $bp-m;
-  @include flex(row, center, center);
-  background-color: $color-white;
+  @include flex(row, baseline, center);
+  @extend %container;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: $white;
   border-radius: 8px;
 
+  @media screen and (max-width: 992px) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  @media screen and (max-width: 576px) {
+    @include flex(column);
+  }
+
+  @media screen and (max-width: 360px) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
   div {
-    width: calc((100% - 1px) / 2);
     @include flex(column, center);
+    width: calc((100% - 1px) / 2);
+
+    @media screen and (max-width: 576px) {
+      width: 100%;
+    }
   }
 
-  div h2 {
+  h2 {
+    @extend %font-roboto;
     margin-bottom: 16px;
-    @include font-roboto(400);
-    font-size: $fs-xxl;
-    color: $color-dark;
+    font-size: 32px;
+    line-height: 131%;
+    color: $dark;
+
+    @media screen and (max-width: 992px) {
+      font-size: 28px;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 24px;
+    }
   }
 
-  div p {
-    @include font-inter(400);
-    font-size: $fs-s;
+  p {
+    @extend %font-inter;
+    font-size: 14px;
+    line-height: 157%;
     letter-spacing: 0.08px;
-    color: $color-dark;
+    color: $dark;
+    text-align: center;
+
+    @media screen and (max-width: 992px) {
+      width: 80%;
+    }
   }
 
   span {
     width: 1px;
     height: 80px;
+    align-self: center;
     background-color: rgba(30, 25, 40, 0.16);
+
+    @media screen and (max-width: 576px) {
+      width: 80%;
+      height: 1px;
+      margin-top: 48px;
+      margin-bottom: 48px;
+    }
+
+    @media screen and (max-width: 360px) {
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
   }
 }
