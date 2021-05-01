@@ -3,41 +3,98 @@
 .feedback {
   @include flex(column, center);
   width: 100%;
-  background-color: $color-purple;
+  background-color: $purple;
 }
 
 .feedback__container {
-  width: 45%;
-  padding-top: $bp-xl;
-  padding-bottom: $bp-xxl;
   @include flex(column, center);
+  max-width: 824px;
+  padding-top: 144px;
+  padding-bottom: 184px;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 100px;
+    padding-bottom: 144px;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding-top: 80px;
+    padding-bottom: 120px;
+  }
 
   h2 { 
+    @extend %font-inter;
     margin-bottom: 24px;
-    @include font-inter(400);
-    font-size: $fs-m;
+    font-size: 16px;
+    line-height: 187%;
     letter-spacing: 0.25px;
-    color: $color-white;
+    color: $sand;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 16px;
+    }
+
+    @media screen and (max-width: 360px) {
+      margin-bottom: 24px;
+      font-size: 14px;
+    }
   }
 
   span {
-    margin-bottom: -32px;
-    @include font-roboto(400);
+    @extend %font-roboto;
     font-size: 96px;
-    color: $color-white;
+    line-height: 100%;
+    color: $sand;
+
+    @media screen and (max-width: 992px) {
+      margin-bottom: -32px;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 80px;
+    }
+
+    @media screen and (max-width: 360px) {
+      font-size: 60px;
+      margin-bottom: -12px;
+    }
   }
 
   p {
-    @include font-roboto(400);
-    font-size: $fs-xxl;
+    @extend %font-roboto;
+    font-size: 32px;
+    line-height: 120%;
     text-align: center;
-    color: $color-white;
+    color: $sand;
+
+    @media screen and (max-width: 992px) {
+      width: 90%;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 28px;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+      line-height: 151%;
+    }
+
+    @media screen and (max-width: 360px) {
+      width: 80%;
+      font-size: 18px;
+    }
   }
 
   p:last-of-type {
+    @extend %font-inter;
     margin-top: 32px;
-    @include font-inter(400);
-    font-size: $fs-m;
-    color: $color-white;
+    font-size: 16px;
+    line-height: 160%;
+    color: $sand;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 48px;
+    }
   }
 }

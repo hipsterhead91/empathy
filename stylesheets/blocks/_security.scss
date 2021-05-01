@@ -1,33 +1,56 @@
 // SECURITY
 
 .security {
-  width: 100%;
   @include flex(column, center);
+  width: 100%;
   background: linear-gradient(to bottom, $color-sand 50%, $color-purple 50%);
 }
 
 .security__container {
-  width: 1200px;
-  padding-top: $bp-m;
-  padding-bottom: $bp-m;
   @include flex(column, center);
-  background-color: $color-white;
+  @extend %container;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: $white;
   border-radius: 8px;
 
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    border-radius: 0;
+  }
+
   h2 {
-    margin-bottom: 28px;
-    @include font-roboto(400);
-    font-size: $fs-xxl;
-    color: $color-dark;
+    @extend %font-roboto;
+    margin-bottom: 24px;
+    font-size: 32px;
+    line-height: 131%;
+    color: $dark;
+    text-align: center;
+
+    @media screen and (max-width: 576px) {
+      max-width: 80%;
+      font-size: 24px;
+    }
   }
 
   p {
-    width: 58%;
-    @include font-inter(400);
-    font-size: $fs-l;
+    @extend %font-roboto;
+    max-width: 650px;
+    font-size: 18px;
+    line-height: 167%;
     letter-spacing: 0.25px;
-    line-height: 1.6;
+    color: $dark-lite;
     text-align: center;
-    color: $color-dark;
+
+    @media screen and (max-width: 768px) {
+      max-width: 90%;
+    }
+
+    @media screen and (max-width: 576px) {
+      max-width: 95%;
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 14px;
+    }
   }
 }

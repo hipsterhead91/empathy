@@ -3,20 +3,42 @@
 .affiliates {
   @include flex(column, center);
   width: 100%;
-  background-color: $color-beige;
+  background-color: $beige;
 }
 
 .affiliates__container {
-  width: 1200px;
-  padding-top: $bp-xl;
-  padding-bottom: $bp-xl;
   @include flex(column, center);
+  @extend %container;
+  padding-top: 144px;
+  padding-bottom: 144px;
+
+  @media screen and (max-width: 992px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-top: 80px;
+  }
+
+  @media screen and (max-width: 360px) {
+    padding-top: 48px;
+    padding-bottom: 80px;
+  }
 
   h2 {
+    @extend %font-roboto;
     margin-bottom: 66px;
-    @include font-roboto(400);
-    font-size: $fs-xxl;
-    color: $color-dark;
+    font-size: 32px;
+    color: $dark;
+
+    @media screen and (max-width: 992px) {
+      margin-bottom: 40px;
+    }
+
+    @media screen and (max-width: 576px) {
+      font-size: 28px;
+    }
   }
 }
 
@@ -25,11 +47,69 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 16px;
+
+  @media screen and (max-width: 1400px) {
+    grid-column-gap: 24px;
+  }
+
+  @media screen and (max-width: 992px) {
+    grid-column-gap: 16px;
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+  }
+
+  @media screen and (max-width: 576px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: 360px) {
+    @include flex(column);
+  }
 }
 
 .affiliates__list-element {
-  height: 144px;
   @include flex(column, center, center);
+  height: 144px;
   background: rgba(30, 25, 40, 0.08);
   border-radius: 8px;
+
+  @media screen and (max-width: 1400px) {
+    height: 132px;
+  }
+
+  @media screen and (max-width: 1400px) {
+    height: 10vw;
+  }
+
+  @media screen and (max-width: 768px) {
+    height: 15vw;
+  }
+
+  @media screen and (max-width: 576px) {
+    height: 20vw;
+  }
+}
+
+.affiliates__logo {
+  max-width: 134px;
+  max-height: 46px;
+
+  @media screen and (max-width: 992px) {
+    max-width: 100px;
+    max-height: 28px;
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 120px;
+    max-height: 32px;
+  }
+
+  @media screen and (max-width: 576px) {
+    max-width: 100px;
+    max-height: 28px;
+  }
 }

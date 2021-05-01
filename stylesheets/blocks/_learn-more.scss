@@ -44,8 +44,12 @@
     color: $dark-lite;
     text-align: center;
 
+    @media screen and (max-width: 768px) {
+      max-width: 90%;
+    }
+
     @media screen and (max-width: 576px) {
-      max-width: 100%;
+      max-width: 95%;
       padding-left: 20px;
       padding-right: 20px;
       font-size: 14px;
