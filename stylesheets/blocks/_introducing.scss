@@ -4,6 +4,10 @@
   @include flex(column, center);
   width: 100%;
   background-color: $beige;
+
+  @media screen and (max-width: 576px) {
+    padding-top: 60px;
+  }
 }
 
 .introducing__container {

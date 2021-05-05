@@ -137,9 +137,16 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 9999;
   width: 100%;
   background-color: #EDE6DD;
-  color: red;
+}
+
+@media screen and (max-width: 576px) {
+  .header {
+    position: fixed;
+    background-color: #DAD2C8;
+  }
 }
 
 .header__container {
@@ -166,11 +173,19 @@ a {
   }
 }
 
+@media screen and (max-width: 576px) {
+  .header__container {
+    height: 60px;
+  }
+}
+
 .header__logo {
   background-image: url(../images/logo.svg);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  position: relative;
+  z-index: 99;
   width: 128px;
   height: 32px;
 }
@@ -183,6 +198,7 @@ a {
 
 .menu__button {
   position: absolute;
+  z-index: 99;
   right: 0;
   width: 30px;
   height: 20px;
@@ -237,19 +253,31 @@ a {
 @media screen and (max-width: 576px) {
   .menu__list {
     position: fixed;
-    top: 80px;
+    z-index: 90;
+    top: 0;
     right: 0;
-    width: 100%;
-    padding-right: 40px;
+    width: 100vw;
+    height: 100vh;
     display: none;
-    background-color: #FFD394;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(218, 210, 200, 0.8)), to(#DAD2C8));
+    background: linear-gradient(to top, rgba(218, 210, 200, 0.8) 0%, #DAD2C8 100%);
   }
 }
 
-@media screen and (max-width: 576px) {
-  .menu__list {
-    padding-right: 20px;
-  }
+.menu__list_visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
 .menu__list-element {
@@ -262,11 +290,15 @@ a {
 
 @media screen and (max-width: 576px) {
   .menu__list-element {
-    margin-right: 0;
+    margin-right: 30px;
     margin-bottom: 20px;
+  }
+  .menu__list-element:first-of-type {
+    margin-top: 60px;
   }
   .menu__list-element:last-of-type {
     margin-bottom: 0;
+    margin-right: 30px;
   }
 }
 
@@ -277,8 +309,12 @@ a {
 
 @media screen and (max-width: 576px) {
   .menu__link {
-    font-size: 20px;
+    font-size: 24px;
   }
+}
+
+.locked {
+  overflow: hidden;
 }
 
 .introducing {
@@ -297,6 +333,12 @@ a {
           justify-content: start;
   width: 100%;
   background-color: #EDE6DD;
+}
+
+@media screen and (max-width: 576px) {
+  .introducing {
+    padding-top: 60px;
+  }
 }
 
 .introducing__container {

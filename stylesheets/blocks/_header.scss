@@ -2,9 +2,14 @@
 
 .header {
   @include flex(column, center, center);
+  z-index: 9999;
   width: 100%;
   background-color: $beige;
-  color: red;
+
+  @media screen and (max-width: 576px) {
+    position: fixed;
+    background-color: $beige-dark;
+  }
 }
 
 .header__container {
@@ -16,10 +21,16 @@
   @media screen and (max-width: 768px) {
     height: 80px;
   }
+
+  @media screen and (max-width: 576px) {
+    height: 60px;
+  }
 }
 
 .header__logo {
   @include bg-image(url(../images/logo.svg));
+  position: relative;
+  z-index: 99;
   width: 128px;
   height: 32px;
 
@@ -30,6 +41,7 @@
 
 .menu__button {
   position: absolute;
+  z-index: 99;
   right: 0;
   width: 30px;
   height: 20px;
@@ -57,18 +69,18 @@
 
   @media screen and (max-width: 576px) {
     position: fixed;
-    top: 80px;
+    z-index: 90;
+    top: 0;
     right: 0;
-    width: 100%;
-    padding-right: 40px;
+    width: 100vw;
+    height: 100vh;
     display: none;
-    // @include flex(column, flex-end);
-    background-color: $gold;
+    background: linear-gradient(to top, rgba($beige-dark, 0.8) 0%, $beige-dark 100%);
   }
+}
 
-  @media screen and (max-width: 576px) {
-    padding-right: 20px;
-  }
+.menu__list_visible {
+  @include flex(column, flex-end);
 }
 
 .menu__list-element {
@@ -76,9 +88,17 @@
   &:last-of-type { margin-right: 0 }
 
   @media screen and (max-width: 576px) {
-    margin-right: 0;
+    margin-right: 30px;
     margin-bottom: 20px;
-    &:last-of-type { margin-bottom: 0 }
+
+    &:first-of-type {
+      margin-top: 60px;
+    }
+
+    &:last-of-type { 
+      margin-bottom: 0;
+      margin-right: 30px;
+    }
   }
 }
 
@@ -88,6 +108,10 @@
   color: $dark;
 
   @media screen and (max-width: 576px) {
-    font-size: 20px;
+    font-size: 24px;
   }
+}
+
+.locked {
+  overflow: hidden;
 }
