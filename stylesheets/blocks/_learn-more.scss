@@ -2,8 +2,6 @@
 
 .learn-more {
   @include flex(column, center);
-  position: relative;
-  z-index: 2;
   width: 100%;
   background: linear-gradient(to bottom, $beige 50%, $gold 50%);
 }
@@ -11,6 +9,8 @@
 .learn-more__container {
   @include flex(column, center);
   @extend %container;
+  position: relative;
+  z-index: 3;
   padding-top: 80px;
   padding-bottom: 80px;
   background-color: $white;
@@ -58,5 +58,6 @@
 
   button {
     @include button(transparent, $dark, 1px solid $dark);
+    z-index: 5;
   }
 }

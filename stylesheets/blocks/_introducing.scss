@@ -10,87 +10,86 @@
   @include flex();
   @extend %container;
   position: relative;
-  padding-top: 80px;
-  padding-bottom: 96px;
+  margin-top: 80px;
+  margin-bottom: 96px;
 
   @media screen and (max-width: 1200px) {
-    padding-top: 40px;
+    margin-top: 40px;
   }
 
   @media screen and (max-width: 576px) {
-    padding-top: 24px;
-    padding-bottom: 80px;
+    margin-top: 24px;
+    margin-bottom: 80px;
   }
 }
 
 .introducing__info {
+  @include flex(column);
   z-index: 3;
-  width: 50%;
 
-  @media screen and (max-width: 768px) {
-    width: 100%;
+  @media screen and (max-width: 576px) {
+    @include flex(column, center);
   }
 
   h1 {
     @extend %font-roboto;
-    max-width: 70%;
+    max-width: 420px;
     margin-bottom: 24px;
     font-size: 48px;
     line-height: 121%;
     color: $dark;
 
-    @media screen and (max-width: 1200px) {
-      font-size: 32px;
+    @media screen and (max-width: 992px) {
+      max-width: 360px;
+      font-size: 40px;
     }
 
     @media screen and (max-width: 576px) {
+      max-width: 280px;
       margin-bottom: 16px;
-      font-size: 24px;
+      font-size: 32px;
+      text-align: center;
     }
   }
 
   p:first-of-type {
     @extend %font-inter;
-    max-width: 90%;
+    max-width: 494px;
     margin-bottom: 4px;
     font-size: 16px;
     line-height: 187%;
     letter-spacing: 0.25px;
     color: $dark-lite;
 
-    @media screen and (max-width: 1200px) {
-      max-width: 80%;
+    @media screen and (max-width: 992px) {
+
       font-size: 14px;
     }
 
     @media screen and (max-width: 576px) {
-      max-width: 80%;
       font-size: 12px;
+      text-align: center;
     }
   }
 
   p {
     @extend %font-inter;
-    max-width: 90%;
+    max-width: 548px;
     margin-bottom: 28px;
     font-size: 18px;
     line-height: 167%;
     letter-spacing: 0.25px;
     color: $dark-lite;
 
-    @media screen and (max-width: 1200px) {
-      max-width: 80%;
+    @media screen and (max-width: 992px) {
+      max-width: 494px;
       font-size: 16px;
     }
 
-    @media screen and (max-width: 768px) {
-      max-width: 70%;
-    }
-
     @media screen and (max-width: 576px) {
-      max-width: 80%;
       margin-bottom: 20px;
       font-size: 14px;
+      text-align: center;
     }
   }
 
@@ -101,13 +100,14 @@
     letter-spacing: 0.25px;
     color: $dark;
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 992px) {
       font-size: 16px;
     }
 
     @media screen and (max-width: 576px) {
       margin-bottom: 20px;
       font-size: 14px;
+      text-align: center;
     }
   }
 }
@@ -116,17 +116,23 @@
   @include bg-image(url(../images/bg-family.png));
   position: absolute;
   z-index: 1;
-  bottom: -80px;
+  bottom: -32%;
   right: 0;
-  width: 50%;
-  height: 100%;
+  width: 500px;
+  height: 380px;
 
-  @media screen and (max-width: 992px) {
-    width: 45%;
-    bottom: -120px;
+  @media screen and (max-width: 1200px) {
+    width: 400px;
+    height: 308px;
   }
 
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 992px) {
+    width: 340px;
+    height: 260px;
+    bottom: -34%;
+  }
+
+  @media screen and (max-width: 768px) {
     display: none;
   }
 }

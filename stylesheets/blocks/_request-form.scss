@@ -7,14 +7,9 @@
   background-color: $white;
   border-radius: 28px;
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 992px) {
     max-width: 360px;
   }
-
-  // @media screen and (max-width: 576px) {
-  //   max-width: 360px;
-  //   height: 48px;
-  // }
 
   input {
     @extend %font-inter;
