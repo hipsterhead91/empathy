@@ -68,8 +68,9 @@ $dark-lite: rgba($dark, 0.8);
   background-color: $dark;
   border-radius: 20px;
 
-  @media screen and (max-width: 992px) {
-    margin: 0;
+  @media screen and (max-width: 1200px) {
+    margin-top: 16px;
+    margin-left: 0;
   }
 }
 

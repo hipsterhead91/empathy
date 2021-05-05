@@ -7,50 +7,48 @@
 }
 
 .footer__container {
-  @include flex(column, center);
   @extend %container;
   padding-top: 64px;
   padding-bottom: 64px;
-}
+  display: grid;
+  grid-template-columns: 55% 45%;
+  grid-template-rows: repeat(3, auto);
 
-.footer__top {
-  @include flex(row, normal, space-between);
-  width: 100%;
-  margin-bottom: 114px;
-
-  @media screen and (max-width: 992px) {
-    margin-bottom: 80px;
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: auto minmax(256px, 35%);
   }
 
   @media screen and (max-width: 768px) {
-    display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, auto);
   }
 
   @media screen and (max-width: 576px) {
-    @include flex(column);
-  }
-}
-
-.footer__top-left {
-  @include flex();
-  width: 50%;
-
-  @media screen and (max-width: 768px) {
-    width: 100%;
-  }
-
-  @media screen and (max-width: 768px) {
-    @include flex(row, normal, space-between);
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 }
 
 .footer__links {
-  @include flex(column);
-  width: 50%;
+  @include flex();
+  padding-bottom: 114px;
 
-  @media screen and (max-width: 576px) {
-    width: 40%;
+  @media screen and (max-width: 992px) {
+    padding-bottom: 68px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 48px;
+  }
+
+  ul {
+    @include flex(column);
+    width: 50%;
+
+    @media screen and (max-width: 768px) {
+      width: 112px;
+      &:first-of-type { margin-right: 36px }
+    }
   }
 
   h2 {
@@ -61,12 +59,13 @@
     letter-spacing: 0.25px;
     color: $dark;
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 992px) {
+      margin-bottom: 12px;
       font-size: 16px;
     }
 
-    @media screen and (max-width: 992px) {
-      margin-bottom: 12px;
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
     }
   }
 
@@ -76,8 +75,10 @@
     @media screen and (max-width: 992px) {
       margin-bottom: 12px;
     }
+  }
 
-    &:last-of-type { margin-bottom: 0 }
+  li:last-of-type { 
+    margin-bottom: 0;
   }
 
   a {
@@ -86,126 +87,86 @@
     line-height: 1.6;
     color: $dark;
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 992px) {
       font-size: 14px;
     }
-  }
-}
 
-.footer__top-right {
-  @include flex(row, normal, flex-end);
-  width: 50%;
-
-  @media screen and (max-width: 992px) {
-    @include flex(column, flex-end);
-    width: auto;
-  }
-
-  @media screen and (max-width: 576px) {
-    width: 210px;
-  }
-
-  div { 
-    @include flex(row, normal, space-around);
-
-    @media screen and (max-width: 992px) {
-      width: 100%;
-      margin-top: 12px;
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
     }
   }
 }
 
-#subscribe-button {
+.footer__social-media {
+  @include flex(row, normal, flex-end);
+
+  @media screen and (max-width: 1200px) {
+    max-width: 256px;
+    justify-self: flex-end;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-evenly;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.footer__subscribe {
   @include button();
 
   @media screen and (max-width: 1200px) {
     font-size: 12px;
   }
-
-  @media screen and (max-width: 992px) {
-    max-width: 225px;
-    font-size: 12px;
-  }
 }
 
-#twitter-button {
+.footer__twitter {
   @include bg-image(url('../images/logo-twitter.svg'), center, 40%);
   @extend %round-button;
 }
 
-#instagram-button {
+.footer__instagram {
   @include bg-image(url('../images/logo-instagram.svg'), center, 40%);
   @extend %round-button;
 }
 
-#facebook-button {
+.footer__facebook {
   @include bg-image(url('../images/logo-facebook.svg'), center, 40%);
   @extend %round-button;
 }
 
-#linkedin-button {
+.footer__linkedin {
   @include bg-image(url('../images/logo-linkedin.svg'), center, 40%);
   @extend %round-button;
 }
 
-.footer__bottom {
-  @include flex(row, flex-end, space-between);
-  width: 100%;
-
-  @media screen and (max-width: 992px) {
-    @include flex(row, normal, space-between);
-  }
-
-  @media screen and (max-width: 576px) {
-    @include flex(column, start);
-  }
-}
-
-.footer__bottom-left {
-  @include flex(column);
-}
-
 .footer__description {
   @extend %font-inter;
-  max-width: 664px;
-  margin-bottom: 14px;
+  max-width: 668px;
+  padding-bottom: 14px;
   font-size: 14px;
   line-height: 157%;
   color: $dark;
 
-  @media screen and (max-width: 1200px) {
-    max-width: 90%;
+  @media screen and (max-width: 992px) {
+    max-width: 100%;
+    padding-right: 16px;
+    font-size: 12px;
   }
 
   @media screen and (max-width: 768px) {
-    max-width: 80%;
-    font-size: 12px;
+    display: none;
   }
 }
 
-.footer__address {
-  @extend %font-inter-bold;
-  font-size: 12px;
-  color: $dark;
-}
-
-.footer__copyright {
-  @extend %font-inter;
-  font-size: 12px;
-  color: $dark;
-}
-
-.footer__bottom-right {
-  @include flex(column, flex-end);
-}
-
 .footer__stores {
-  @include flex();
-  margin-bottom: 20px;
+  @include flex(row, normal, flex-end);
 
-  @media screen and (max-width: 992px) {
-    width: 225px;
-    flex: 1;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 32px;
+    grid-row-start: 1;
+    justify-self: flex-start;
   }
 }
 
@@ -215,8 +176,8 @@
   height: 40px;
   margin-right: 16px;
 
-  @media screen and (max-width: 992px) {
-    max-width: 105px;
+  @media screen and (max-width: 768px) {
+    margin-right: 20px;
   }
 }
 
@@ -224,8 +185,311 @@
   @include bg-image(url('../images/logo-google.svg'));
   width: 120px;
   height: 40px;
+}
 
-  @media screen and (max-width: 992px) {
-    max-width: 105px;
+.footer__address {
+  @extend %font-inter-bold;
+  font-size: 12px;
+  line-height: 167%;
+  color: $dark;
+}
+
+.footer__copyright {
+  @extend %font-inter;
+  font-size: 12px;
+  line-height: 167%;
+  color: $dark-lite;
+  text-align: end;
+
+  @media screen and (max-width: 768px) {
+    text-align: start;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// РЕЗЕРВ
+
+// .footer {
+//   @include flex(column, center);
+//   width: 100%;
+//   background-color: $white;
+// }
+
+// .footer__container {
+//   @include flex(column, center);
+//   @extend %container;
+//   padding-top: 64px;
+//   padding-bottom: 64px;
+// }
+
+// .footer__top {
+//   @include flex(row, normal, space-between);
+//   width: 100%;
+//   margin-bottom: 114px;
+
+//   @media screen and (max-width: 992px) {
+//     margin-bottom: 80px;
+//   }
+
+//   @media screen and (max-width: 768px) {
+//     display: grid;
+//     grid-template-columns: 1fr auto;
+//   }
+
+//   @media screen and (max-width: 576px) {
+//     @include flex(column);
+//     margin-bottom: 40px;
+//   }
+// }
+
+// .footer__top-left {
+//   @include flex();
+//   width: 50%;
+
+//   @media screen and (max-width: 768px) {
+//     width: 100%;
+//   }
+
+//   @media screen and (max-width: 768px) {
+//     @include flex(row, normal, space-between);
+//   }
+// }
+
+// .footer__links {
+//   @include flex(column);
+//   width: 50%;
+
+//   @media screen and (max-width: 576px) {
+//     width: 40%;
+//   }
+
+//   h2 {
+//     @extend %font-inter-bold;
+//     margin-bottom: 16px;
+//     font-size: 18px;
+//     line-height: 1.6;
+//     letter-spacing: 0.25px;
+//     color: $dark;
+
+//     @media screen and (max-width: 1200px) {
+//       font-size: 16px;
+//     }
+
+//     @media screen and (max-width: 992px) {
+//       margin-bottom: 12px;
+//     }
+//   }
+
+//   li { 
+//     margin-bottom: 16px;
+
+//     @media screen and (max-width: 992px) {
+//       margin-bottom: 12px;
+//     }
+
+//     &:last-of-type { margin-bottom: 0 }
+//   }
+
+//   a {
+//     @extend %font-inter;
+//     font-size: 16px;
+//     line-height: 1.6;
+//     color: $dark;
+
+//     @media screen and (max-width: 1200px) {
+//       font-size: 14px;
+//     }
+//   }
+// }
+
+// .footer__top-right {
+//   @include flex(row, normal, flex-end);
+//   width: 50%;
+
+//   @media screen and (max-width: 992px) {
+//     @include flex(column, flex-end);
+//     width: auto;
+//   }
+
+//   @media screen and (max-width: 576px) {
+//     width: 210px;
+//     margin-top: 40px;
+//     align-self: center;
+//   }
+
+//   div { 
+//     @include flex(row, normal, space-around);
+
+//     @media screen and (max-width: 992px) {
+//       width: 100%;
+//       margin-top: 12px;
+//     }
+//   }
+// }
+
+// #subscribe-button {
+//   @include button();
+
+//   @media screen and (max-width: 1200px) {
+//     font-size: 12px;
+//   }
+
+//   @media screen and (max-width: 992px) {
+//     max-width: 225px;
+//     font-size: 12px;
+//   }
+// }
+
+// #twitter-button {
+//   @include bg-image(url('../images/logo-twitter.svg'), center, 40%);
+//   @extend %round-button;
+// }
+
+// #instagram-button {
+//   @include bg-image(url('../images/logo-instagram.svg'), center, 40%);
+//   @extend %round-button;
+// }
+
+// #facebook-button {
+//   @include bg-image(url('../images/logo-facebook.svg'), center, 40%);
+//   @extend %round-button;
+// }
+
+// #linkedin-button {
+//   @include bg-image(url('../images/logo-linkedin.svg'), center, 40%);
+//   @extend %round-button;
+// }
+
+// .footer__bottom {
+//   @include flex(row, flex-end, space-between);
+//   width: 100%;
+
+//   @media screen and (max-width: 992px) {
+//     @include flex(row, normal, space-between);
+//   }
+
+//   @media screen and (max-width: 576px) {
+//     @include flex(column, start);
+//   }
+// }
+
+// .footer__bottom-left {
+//   @include flex(column);
+
+//   @media screen and (max-width: 576px) {
+//     margin-bottom: 40px;
+//   }
+// }
+
+// .footer__description {
+//   @extend %font-inter;
+//   max-width: 664px;
+//   margin-bottom: 14px;
+//   font-size: 14px;
+//   line-height: 157%;
+//   color: $dark;
+
+//   @media screen and (max-width: 1200px) {
+//     max-width: 90%;
+//   }
+
+//   @media screen and (max-width: 768px) {
+//     max-width: 80%;
+//     font-size: 12px;
+//   }
+
+//   @media screen and (max-width: 576px) {
+//     max-width: 100%;
+//   }
+// }
+
+// .footer__address {
+//   @extend %font-inter-bold;
+//   font-size: 12px;
+//   color: $dark;
+// }
+
+// .footer__copyright {
+//   @extend %font-inter;
+//   font-size: 12px;
+//   color: $dark;
+
+//   @media screen and (max-width: 576px) {
+//     align-self: start;
+//   }
+// }
+
+// .footer__bottom-right {
+//   @include flex(column, flex-end);
+// }
+
+// .footer__stores {
+//   @include flex();
+//   margin-bottom: 20px;
+
+//   @media screen and (max-width: 992px) {
+//     width: 225px;
+//     flex: 1;
+//   }
+// }
+
+// .footer__app-store {
+//   @include bg-image(url('../images/logo-apple.svg'));
+//   width: 120px;
+//   height: 40px;
+//   margin-right: 16px;
+
+//   @media screen and (max-width: 992px) {
+//     max-width: 105px;
+//   }
+// }
+
+// .footer__google-play {
+//   @include bg-image(url('../images/logo-google.svg'));
+//   width: 120px;
+//   height: 40px;
+
+//   @media screen and (max-width: 992px) {
+//     max-width: 105px;
+//   }
+// }
