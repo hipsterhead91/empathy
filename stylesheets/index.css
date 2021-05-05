@@ -275,7 +275,7 @@ a {
   color: #1E1928;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
   .menu__link {
     font-size: 20px;
   }
@@ -324,10 +324,15 @@ a {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .introducing__container {
+    margin-bottom: 64px;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .introducing__container {
     margin-top: 24px;
-    margin-bottom: 80px;
   }
 }
 
@@ -383,9 +388,9 @@ a {
 
 @media screen and (max-width: 576px) {
   .introducing__info h1 {
-    max-width: 280px;
+    max-width: 260px;
     margin-bottom: 16px;
-    font-size: 32px;
+    font-size: 28px;
     text-align: center;
   }
 }
@@ -407,7 +412,6 @@ a {
 
 @media screen and (max-width: 576px) {
   .introducing__info p:first-of-type {
-    font-size: 12px;
     text-align: center;
   }
 }
@@ -635,7 +639,7 @@ a {
   padding-bottom: 80px;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .how-it-works__container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -665,13 +669,6 @@ a {
 
 @media screen and (max-width: 768px) {
   .how-it-works__container h2 {
-    width: 40%;
-    font-size: 40px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .how-it-works__container h2 {
     width: 100%;
     margin-bottom: 48px;
     font-size: 32px;
@@ -686,12 +683,6 @@ a {
 }
 
 @media screen and (max-width: 768px) {
-  .how-it-works__list {
-    width: 60%;
-  }
-}
-
-@media screen and (max-width: 576px) {
   .how-it-works__list {
     width: 100%;
   }
@@ -755,7 +746,7 @@ a {
   border-radius: 20px;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .how-it-works__list-element span {
     width: 32px;
     height: 32px;
@@ -783,7 +774,7 @@ a {
   color: #1E1928;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .how-it-works__list-element h3 {
     max-width: calc(100% - 32px - 16px);
   }
@@ -804,7 +795,7 @@ a {
   color: rgba(30, 25, 40, 0.8);
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .how-it-works__list-element p {
     margin-left: 48px;
     font-size: 14px;
@@ -839,7 +830,7 @@ a {
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .how-it-works__image {
     bottom: -144px;
     width: 320px;
@@ -967,13 +958,13 @@ a {
 
 @media screen and (max-width: 576px) {
   ._end-aligned {
-    padding-left: 20%;
+    padding-left: 10%;
   }
 }
 
 @media screen and (max-width: 576px) {
   ._start-aligned {
-    padding-right: 20%;
+    padding-right: 10%;
   }
 }
 

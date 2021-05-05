@@ -17,9 +17,12 @@
     margin-top: 40px;
   }
 
+  @media screen and (max-width: 768px) {
+    margin-bottom: 64px;
+  }
+
   @media screen and (max-width: 576px) {
     margin-top: 24px;
-    margin-bottom: 80px;
   }
 }
 
@@ -45,9 +48,9 @@
     }
 
     @media screen and (max-width: 576px) {
-      max-width: 280px;
+      max-width: 260px;
       margin-bottom: 16px;
-      font-size: 32px;
+      font-size: 28px;
       text-align: center;
     }
   }
@@ -62,12 +65,10 @@
     color: $dark-lite;
 
     @media screen and (max-width: 992px) {
-
       font-size: 14px;
     }
 
     @media screen and (max-width: 576px) {
-      font-size: 12px;
       text-align: center;
     }
   }
