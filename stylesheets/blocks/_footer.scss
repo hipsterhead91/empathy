@@ -176,10 +176,10 @@
 }
 
 .footer__app-store {
-  @include bg-image(url('../images/logo-apple.svg'));
   width: 120px;
   height: 40px;
   margin-right: 16px;
+  object-fit: contain;
 
   @media screen and (max-width: 768px) {
     margin-right: 20px;
@@ -187,9 +187,9 @@
 }
 
 .footer__google-play {
-  @include bg-image(url('../images/logo-google.svg'));
   width: 120px;
   height: 40px;
+  object-fit: contain;
 }
 
 .footer__address {

@@ -2217,13 +2217,11 @@ a {
 }
 
 .footer__app-store {
-  background-image: url("../images/logo-apple.svg");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
   width: 120px;
   height: 40px;
   margin-right: 16px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @media screen and (max-width: 768px) {
@@ -2233,12 +2231,10 @@ a {
 }
 
 .footer__google-play {
-  background-image: url("../images/logo-google.svg");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
   width: 120px;
   height: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .footer__address {
