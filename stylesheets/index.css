@@ -539,6 +539,8 @@ a {
 @media screen and (max-width: 768px) {
   .learn-more__container {
     width: 100%;
+    padding-top: 64px;
+    padding-bottom: 64px;
     border-radius: 0;
   }
 }
@@ -876,6 +878,13 @@ a {
   padding-bottom: 80px;
 }
 
+@media screen and (max-width: 576px) {
+  .about__container {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}
+
 .about__block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -897,6 +906,12 @@ a {
 
 .about__block:last-of-type {
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 576px) {
+  .about__block {
+    margin-bottom: 64px;
+  }
 }
 
 .about__text {
@@ -925,6 +940,7 @@ a {
 
 @media screen and (max-width: 576px) {
   .about__text h2 {
+    margin-bottom: 16px;
     font-size: 24px;
   }
 }
