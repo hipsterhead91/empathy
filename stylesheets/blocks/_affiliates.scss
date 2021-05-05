@@ -68,6 +68,8 @@
 
   @media screen and (max-width: 360px) {
     @include flex(column);
+    grid-template-columns: none;
+    grid-gap: 0;
   }
 }
 
@@ -91,6 +93,11 @@
 
   @media screen and (max-width: 576px) {
     height: 20vw;
+  }
+
+  @media screen and (max-width: 360px) {
+    margin-bottom: 24px;
+    &:last-of-type { margin: 0 }
   }
 }
 
