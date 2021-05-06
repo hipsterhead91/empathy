@@ -1232,7 +1232,6 @@ a {
 }
 
 .services__list-element:hover {
-  height: 160px;
   background-color: #DAD2C8;
 }
 
@@ -1696,6 +1695,12 @@ a {
         grid-template-columns: none;
     grid-gap: 0;
   }
+  .affiliates__list a {
+    margin-bottom: 24px;
+  }
+  .affiliates__list a:last-of-type {
+    margin: 0;
+  }
 }
 
 .affiliates__list-element {
@@ -1744,15 +1749,6 @@ a {
 @media screen and (max-width: 576px) {
   .affiliates__list-element {
     height: 20vw;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .affiliates__list-element {
-    margin-bottom: 24px;
-  }
-  .affiliates__list-element:last-of-type {
-    margin: 0;
   }
 }
 
