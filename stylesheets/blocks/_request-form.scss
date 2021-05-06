@@ -31,7 +31,12 @@
   }
 
   button {
-    @include button($dark, $white, none); 
+    @include button($dark, $white, none);
     margin-right: 10px;
+    transition: all 0.4s;
+
+    &:hover {
+      color: $gold;
+    }
   }
 }

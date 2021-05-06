@@ -4,5 +4,5 @@ const body = document.querySelector('body');
 
 burger.addEventListener('click', () => {
   menu.classList.toggle('menu__list_visible');
-  body.classList.toggle('locked');
+  body.classList.toggle('body_locked');
 });

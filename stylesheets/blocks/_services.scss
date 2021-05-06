@@ -42,6 +42,12 @@
 
   button {
     @include button(transparent, $dark, 1px solid $dark);
+    transition: all 0.4s;
+
+    &:hover {
+      color: $white;
+      background-color: $dark;
+    }
   }
 }
 
@@ -90,6 +96,12 @@
   height: 160px;
   background-color: $white;
   border-radius: 8px;
+  transition: all 0.3s;
+
+  &:hover {
+    height: 160px;
+    background-color: $beige-dark;
+  }
 
   @media screen and (max-width: 1439px) {
     width: 260px;

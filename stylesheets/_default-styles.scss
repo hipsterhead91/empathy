@@ -16,6 +16,10 @@ body {
   line-height: 1.2;
 }
 
+.body_locked {
+  overflow: hidden;
+}
+
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 ol, ul { 
   list-style: none; 

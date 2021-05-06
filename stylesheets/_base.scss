@@ -68,6 +68,11 @@ $dark-lite: rgba($dark, 0.8);
   margin-left: 16px;
   background-color: $dark;
   border-radius: 20px;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: $purple;
+  }
 
   @media screen and (max-width: 1200px) {
     margin-top: 16px;

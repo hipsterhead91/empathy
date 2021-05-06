@@ -76,8 +76,13 @@
 .affiliates__list-element {
   @include flex(column, center, center);
   height: 144px;
-  background: rgba(30, 25, 40, 0.08);
+  background-color: rgba(30, 25, 40, 0.08);
   border-radius: 8px;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: rgba(30, 25, 40, 0.2);
+  }
 
   @media screen and (max-width: 1400px) {
     height: 132px;

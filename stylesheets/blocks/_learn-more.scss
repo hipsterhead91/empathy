@@ -61,5 +61,11 @@
   button {
     @include button(transparent, $dark, 1px solid $dark);
     z-index: 5;
+    transition: all 0.4s;
+
+    &:hover {
+      color: $white;
+      background-color: $dark;
+    }
   }
 }
